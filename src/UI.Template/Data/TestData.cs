@@ -31,4 +31,10 @@ public static class TestData
         ProductImage = "Camera 2",
         ProductDescription = "Camera"
     };
+
+    public static TestProduct CameraCheckoutProduct { get; } = new TestProduct
+    {
+        ProductCategory = "Cameras",
+        ProductName = "DSLR Camera X200"
+    };
 }

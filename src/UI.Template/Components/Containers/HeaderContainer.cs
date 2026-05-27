@@ -123,4 +123,13 @@ public class HeaderContainer : BaseComponent
         WebDriver.WaitForUrlChanged(() => Title.Click());
         return new AdminPage();
     }
+
+    private readonly Button CheckoutButton = new(By.XPath("//button[@class='checkout-button']"));
+
+    public CheckoutPage GoToCheckout()
+    {
+        OpenBasketContainer();
+        WebDriver.WaitForUrlChanged(() => CheckoutButton.Click());
+        return new CheckoutPage();
+    }
 }
